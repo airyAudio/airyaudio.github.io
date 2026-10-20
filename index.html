@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airy — Support</title>
+    <link rel="icon" type="image/png" href="Airy-icon.png">
     <style>
         :root {
             --bg-color: #ffffff;
@@ -40,19 +41,31 @@
             margin-bottom: 40px;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
-        h1 {
+        .app-icon {
+            width: 76px;
+            height: 76px;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .header-text h1 {
             font-size: 2.2em;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin: 0 0 4px 0;
             letter-spacing: -0.02em;
         }
 
         p.subtitle {
             color: var(--secondary-text);
             font-size: 1.1em;
-            margin-top: 0;
+            margin: 0;
         }
 
         h2 {
@@ -101,8 +114,11 @@
 </head>
 <body>
     <header>
-        <h1>Airy Support</h1>
-        <p class="subtitle">Airy is a native, lossless audio player for macOS 26 and later.</p>
+        <img src="Airy-icon.png" alt="Airy Icon" class="app-icon">
+        <div class="header-text">
+            <h1>Airy Support</h1>
+            <p class="subtitle">Airy is a native, lossless audio player for macOS 26 and later.</p>
+        </div>
     </header>
 
     <main>

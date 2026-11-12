@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://airyaudio.com/</loc>
+        <lastmod>2026-11-10</lastmod>
+        <image:image><image:loc>https://airyaudio.com/images/player-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/light-dark-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/equalizer-info-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/cover-mode-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/playlist-views-web.webp</image:loc></image:image>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/privacy.html</loc>
+        <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/other/</loc>
+        <lastmod>2026-11-11</lastmod>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/other/airy-windows/</loc>
+        <lastmod>2026-11-11</lastmod>
+        <image:image><image:loc>https://airyaudio.com/other/airy-windows/images/player.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/other/airy-windows/images/light-dark.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/other/airy-windows/images/equalizer-info.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/other/airy-windows/images/cover-mode.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/other/airy-windows/images/playlist-views.webp</image:loc></image:image>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/other/airy-windows/privacy.html</loc>
+        <lastmod>2026-11-09</lastmod>
+    </url>
+</urlset>

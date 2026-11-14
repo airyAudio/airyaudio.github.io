@@ -12,8 +12,8 @@
     --accent: #ff375f;
     --accent-2: #7d6bff;
     --link: #0066cc;
-    --shadow: 0 24px 60px -24px rgba(60, 40, 120, 0.35);
-    --hero-glow-1: rgba(150, 132, 230, 0.45);
+    --shadow: 0 24px 60px -24px rgba(30, 60, 130, 0.35);
+    --hero-glow-1: rgba(80, 130, 230, 0.38);
     --hero-glow-2: rgba(255, 170, 150, 0.40);
     --radius: 22px;
 }

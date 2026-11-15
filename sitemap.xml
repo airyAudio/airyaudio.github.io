@@ -16,7 +16,7 @@
     </url>
     <url>
         <loc>https://airyaudio.com/other/</loc>
-        <lastmod>2026-11-14</lastmod>
+        <lastmod>2026-11-15</lastmod>
     </url>
     <url>
         <loc>https://airyaudio.com/other/airy-windows/</loc>
@@ -30,5 +30,18 @@
     <url>
         <loc>https://airyaudio.com/other/airy-windows/privacy.html</loc>
         <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/other/mixy/</loc>
+        <lastmod>2026-11-15</lastmod>
+        <image:image><image:loc>https://airyaudio.com/other/mixy/images/decks-dark.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/other/mixy/images/decks-light.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/other/mixy/images/browse.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/other/mixy/images/pads.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/other/mixy/images/around-jog.webp</image:loc></image:image>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/other/mixy/privacy.html</loc>
+        <lastmod>2026-11-15</lastmod>
     </url>
 </urlset>

@@ -662,3 +662,15 @@ code {
     .app-shot { height: auto; }
     .app-body { padding: 24px; }
 }
+
+/* ---------- Hero with a wide (landscape) window: text centered above it ---------- */
+
+.hero-wide .hero-shot { max-width: 1100px; margin: 36px auto 0; }
+@media (min-width: 900px) {
+    .hero.hero-wide { text-align: center; padding: 72px 0 32px; }
+    .hero-wide .hero-grid { display: block; }
+    .hero-wide .lead { margin-left: auto; margin-right: auto; }
+    .hero-wide .cta-row { justify-content: center; }
+    .hero-wide .hero-shot { margin: 36px auto 0; max-width: 1100px; }
+    .hero-wide .hero-shot.bare { margin-top: 28px; }
+}

@@ -11,7 +11,14 @@
     --border: rgba(29, 29, 31, 0.08);
     --accent: #ff375f;
     --link: #0066cc;
-    --shadow: 0 22px 50px -26px rgba(0, 0, 0, 0.28);
+    --shadow: 0 24px 60px -26px rgba(30, 60, 130, 0.32);
+    /* One blue, used for light and depth (no rainbow gradients). */
+    --hero-light: rgba(80, 130, 230, 0.36);
+    --blue-soft: rgba(80, 130, 230, 0.12);
+    --band: #f1f4fa;
+    --title-1: #4b8cf5;
+    --title-2: #1c4fc4;
+    --card-shadow: 0 1px 2px rgba(20, 40, 90, 0.05), 0 14px 32px -22px rgba(20, 40, 90, 0.28);
     --radius: 22px;
 }
 
@@ -27,6 +34,12 @@
         --border: rgba(255, 255, 255, 0.09);
         --link: #2997ff;
         --shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8);
+        --hero-light: rgba(30, 75, 185, 0.45);
+        --blue-soft: rgba(30, 75, 185, 0.20);
+        --band: #111318;
+        --title-1: #8ab6ff;
+        --title-2: #3e78f2;
+        --card-shadow: none;
     }
 }
 
@@ -96,6 +109,16 @@ a:hover { text-decoration: underline; }
     isolation: isolate;
 }
 
+/* One soft blue light from the top, fading into the page. */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -120px 0 auto 0;
+    height: 860px;
+    z-index: -1;
+    background: radial-gradient(70% 62% at 50% 0%, var(--hero-light), transparent 72%);
+}
+
 /* The icon's shadow is a box-shadow on a rounded wrapper, not a CSS filter:
    Safari sometimes painted a filter's square box around the icon. */
 .hero-icon {
@@ -118,11 +141,14 @@ a:hover { text-decoration: underline; }
 }
 
 .gradient-text {
-    /* The heading's second line: plain grey, no color gradient. */
-    color: var(--text-3);
+    /* The heading's second line: one blue, lighter at the top. */
+    background: linear-gradient(180deg, var(--title-1), var(--title-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 /* In the Upgrade plan's title it is the accent color. */
-.plan h3 .gradient-text { color: var(--accent); }
+.plan h3 .gradient-text { background: none; color: var(--accent); }
 
 .hero .lead {
     font-size: clamp(1.1em, 2.4vw, 1.35em);
@@ -211,6 +237,7 @@ h2 {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 26px;
+    box-shadow: var(--card-shadow);
 }
 
 .card h3 { margin: 14px 0 6px; font-size: 1.12em; letter-spacing: -0.01em; }
@@ -222,17 +249,23 @@ h2 {
     border-radius: 12px;
     display: grid;
     place-items: center;
-    background: var(--accent);
+    background-color: var(--accent);
+    /* A little light from the top, like an app icon. */
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0));
+    box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.35);
     color: #fff;
 }
 .icon-badge svg { width: 22px; height: 22px; }
 /* Each card in one of Apple's system colors, flat. */
-.icon-badge.red    { background: #ff3b30; }
-.icon-badge.blue   { background: #007aff; }
-.icon-badge.orange { background: #ff9500; }
-.icon-badge.purple { background: #af52de; }
-.icon-badge.green  { background: #34c759; }
-.icon-badge.pink   { background: #ff2d55; }
+.icon-badge.red    { background-color: #ff3b30; }
+.icon-badge.blue   { background-color: #007aff; }
+.icon-badge.orange { background-color: #ff9500; }
+.icon-badge.purple { background-color: #af52de; }
+.icon-badge.green  { background-color: #34c759; }
+.icon-badge.pink   { background-color: #ff2d55; }
+
+/* Features and Free / Upgrade sit on a light blue-grey band, for rhythm down the page. */
+#features, #upgrade { background: var(--band); }
 
 /* ---------- Showcase rows ---------- */
 
@@ -371,7 +404,7 @@ kbd {
     margin-top: 18px;
     text-align: center;
     padding: 40px 26px;
-    background: var(--bg-soft);
+    background: radial-gradient(80% 110% at 50% 0%, var(--blue-soft), transparent 72%), var(--card);
 }
 .contact h3 { font-size: 1.5em; margin: 0 0 8px; }
 .contact p { margin: 0 auto 20px; max-width: 520px; }
@@ -507,6 +540,7 @@ footer a { color: var(--text-2); }
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 10px 26px;
+    box-shadow: var(--card-shadow);
 }
 .faq-title { font-size: 1.12em; margin: 16px 0 6px; }
 .faq details { border-top: 1px solid var(--border); }

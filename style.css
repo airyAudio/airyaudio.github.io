@@ -13,7 +13,7 @@
     --link: #0066cc;
     --shadow: 0 24px 60px -26px rgba(30, 60, 130, 0.32);
     /* One blue, used for light and depth (no rainbow gradients). */
-    --hero-light: rgba(80, 130, 230, 0.36);
+    --hero-light: rgba(80, 130, 230, 0.55);
     --blue-soft: rgba(80, 130, 230, 0.12);
     --band: #f1f4fa;
     --title-1: #4b8cf5;
@@ -34,7 +34,7 @@
         --border: rgba(255, 255, 255, 0.09);
         --link: #2997ff;
         --shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8);
-        --hero-light: rgba(30, 75, 185, 0.45);
+        --hero-light: rgba(30, 75, 185, 0.70);
         --blue-soft: rgba(30, 75, 185, 0.20);
         --band: #111318;
         --title-1: #8ab6ff;
@@ -114,9 +114,9 @@ a:hover { text-decoration: underline; }
     content: "";
     position: absolute;
     inset: -120px 0 auto 0;
-    height: 860px;
+    height: 1000px;
     z-index: -1;
-    background: radial-gradient(70% 62% at 50% 0%, var(--hero-light), transparent 72%);
+    background: radial-gradient(95% 85% at 50% 0%, var(--hero-light), transparent 75%);
 }
 
 /* The icon's shadow is a box-shadow on a rounded wrapper, not a CSS filter:

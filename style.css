@@ -1,8 +1,8 @@
 /* Airy website styles. Shared by all pages: Support, Privacy, Other Apps and Airy for Windows. */
 
 :root {
-    --bg: #fbfaff;
-    --bg-soft: #f3f1fa;
+    --bg: #fbfbfd;
+    --bg-soft: #f5f5f7;
     --card: rgba(255, 255, 255, 0.72);
     --card-solid: #ffffff;
     --text: #1d1d1f;
@@ -10,28 +10,23 @@
     --text-3: #86868b;
     --border: rgba(29, 29, 31, 0.08);
     --accent: #ff375f;
-    --accent-2: #7d6bff;
     --link: #0066cc;
-    --shadow: 0 24px 60px -24px rgba(30, 60, 130, 0.35);
-    --hero-glow-1: rgba(80, 130, 230, 0.38);
-    --hero-glow-2: rgba(255, 170, 150, 0.40);
+    --shadow: 0 22px 50px -26px rgba(0, 0, 0, 0.28);
     --radius: 22px;
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --bg: #0b0a10;
-        --bg-soft: #13121a;
-        --card: rgba(28, 27, 36, 0.72);
-        --card-solid: #1c1b24;
+        --bg: #0d0d0f;
+        --bg-soft: #161618;
+        --card: rgba(28, 28, 30, 0.72);
+        --card-solid: #1c1c1e;
         --text: #f5f5f7;
         --text-2: #b4b3bd;
         --text-3: #8c8b96;
         --border: rgba(255, 255, 255, 0.09);
         --link: #2997ff;
         --shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8);
-        --hero-glow-1: rgba(30, 75, 185, 0.42);
-        --hero-glow-2: rgba(255, 120, 110, 0.22);
     }
 }
 
@@ -101,17 +96,6 @@ a:hover { text-decoration: underline; }
     isolation: isolate;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: -120px 0 auto 0;
-    height: 820px;
-    z-index: -1;
-    background:
-        radial-gradient(50% 55% at 25% 30%, var(--hero-glow-1), transparent 70%),
-        radial-gradient(45% 50% at 78% 40%, var(--hero-glow-2), transparent 70%);
-}
-
 /* The icon's shadow is a box-shadow on a rounded wrapper, not a CSS filter:
    Safari sometimes painted a filter's square box around the icon. */
 .hero-icon {
@@ -121,7 +105,7 @@ a:hover { text-decoration: underline; }
     /* Rounder than the icon's own corners, so the shadow stays hidden behind it
        (a smaller radius left light slivers at the bottom corners). */
     border-radius: 32%;
-    box-shadow: 0 18px 30px -8px rgba(40, 30, 80, 0.32);
+    box-shadow: 0 18px 30px -8px rgba(0, 0, 0, 0.28);
 }
 .hero-icon img { width: 100%; height: 100%; }
 
@@ -134,11 +118,11 @@ a:hover { text-decoration: underline; }
 }
 
 .gradient-text {
-    background: linear-gradient(100deg, var(--accent-2), var(--accent) 60%, #ff9f6b);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    /* The heading's second line: plain grey, no color gradient. */
+    color: var(--text-3);
 }
+/* In the Upgrade plan's title it is the accent color. */
+.plan h3 .gradient-text { color: var(--accent); }
 
 .hero .lead {
     font-size: clamp(1.1em, 2.4vw, 1.35em);
@@ -199,12 +183,10 @@ section { padding: 72px 0; }
 
 .eyebrow {
     display: inline-block;
-    font-size: 0.8em;
+    font-size: 1.05em;
     font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 h2 {
@@ -240,17 +222,17 @@ h2 {
     border-radius: 12px;
     display: grid;
     place-items: center;
-    background: linear-gradient(140deg, var(--accent-2), var(--accent));
+    background: var(--accent);
     color: #fff;
 }
 .icon-badge svg { width: 22px; height: 22px; }
-/* Each card in one of Airy's accent colors. */
-.icon-badge.red    { background: linear-gradient(140deg, #ff6b81, #ff2d55); }
-.icon-badge.blue   { background: linear-gradient(140deg, #5ac8fa, #0a84ff); }
-.icon-badge.orange { background: linear-gradient(140deg, #ffc15e, #ff8a00); }
-.icon-badge.purple { background: linear-gradient(140deg, #c58bff, #8e4dff); }
-.icon-badge.green  { background: linear-gradient(140deg, #5ee08a, #1fb455); }
-.icon-badge.pink   { background: linear-gradient(140deg, #ff8ad8, #e0459e); }
+/* Each card in one of Apple's system colors, flat. */
+.icon-badge.red    { background: #ff3b30; }
+.icon-badge.blue   { background: #007aff; }
+.icon-badge.orange { background: #ff9500; }
+.icon-badge.purple { background: #af52de; }
+.icon-badge.green  { background: #34c759; }
+.icon-badge.pink   { background: #ff2d55; }
 
 /* ---------- Showcase rows ---------- */
 
@@ -291,13 +273,10 @@ h2 {
 
 .tag {
     display: inline-block;
-    font-size: 0.75em;
+    font-size: 0.95em;
     font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--accent) 14%, transparent);
-    color: var(--accent);
-    margin-bottom: 12px;
+    color: var(--text-3);
+    margin-bottom: 8px;
 }
 
 /* ---------- Formats ---------- */
@@ -319,7 +298,7 @@ h2 {
     font-weight: 600;
     font-size: 0.92em;
 }
-.chip.lossless { border-color: color-mix(in srgb, var(--accent-2) 45%, transparent); }
+.chip.lossless { border-color: color-mix(in srgb, var(--text) 30%, transparent); }
 
 .note {
     text-align: center;
@@ -365,10 +344,8 @@ h2 {
 
 .plan.upgrade {
     position: relative;
-    border: 1px solid transparent;
-    background:
-        linear-gradient(var(--card-solid), var(--card-solid)) padding-box,
-        linear-gradient(140deg, var(--accent-2), var(--accent)) border-box;
+    border: 1.5px solid var(--accent);
+    background: var(--card-solid);
 }
 
 /* ---------- Support ---------- */
@@ -394,10 +371,7 @@ kbd {
     margin-top: 18px;
     text-align: center;
     padding: 40px 26px;
-    background:
-        radial-gradient(60% 120% at 20% 0%, var(--hero-glow-1), transparent 70%),
-        radial-gradient(60% 120% at 80% 100%, var(--hero-glow-2), transparent 70%),
-        var(--card);
+    background: var(--bg-soft);
 }
 .contact h3 { font-size: 1.5em; margin: 0 0 8px; }
 .contact p { margin: 0 auto 20px; max-width: 520px; }

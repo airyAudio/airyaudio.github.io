@@ -1,4 +1,4 @@
-/* Airy website styles. Shared by all pages: Support, Privacy, Other Apps and Airy for Windows. */
+/* Airy website styles. Shared by all pages: Support, Privacy, More Apps, Airy for Windows and Mixy. */
 
 :root {
     --bg: #fbfbfd;
@@ -610,7 +610,7 @@ footer a { color: var(--text-2); }
 }
 .js-reveal .reveal.in { opacity: 1; transform: none; }
 
-/* ---------- Other Apps page: one wide card per app ---------- */
+/* ---------- More Apps page: one wide card per app ---------- */
 
 .apps-page { padding: 64px 0 24px; }
 .apps-page h1 { font-size: clamp(2.2em, 6vw, 3.2em); letter-spacing: -0.03em; margin: 0 0 10px; line-height: 1.1; }

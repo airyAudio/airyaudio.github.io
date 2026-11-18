@@ -64,7 +64,11 @@
     <url>
         <loc>https://airyaudio.com/more/brightly/</loc>
         <lastmod>2026-11-18</lastmod>
-        <image:image><image:loc>https://airyaudio.com/more/brightly/images/og-image.jpg</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/brightly/images/window-light.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/brightly/images/tooltip.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/brightly/images/indicator.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/brightly/images/menu.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/brightly/images/window-dark.webp</image:loc></image:image>
     </url>
     <url>
         <loc>https://airyaudio.com/more/brightly/privacy.html</loc>

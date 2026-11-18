@@ -74,4 +74,13 @@
         <loc>https://airyaudio.com/more/brightly/privacy.html</loc>
         <lastmod>2026-11-18</lastmod>
     </url>
+    <url>
+        <loc>https://airyaudio.com/more/grepy/</loc>
+        <lastmod>2026-11-18</lastmod>
+        <image:image><image:loc>https://airyaudio.com/more/grepy/images/og-image.jpg</image:loc></image:image>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/more/grepy/privacy.html</loc>
+        <lastmod>2026-11-18</lastmod>
+    </url>
 </urlset>

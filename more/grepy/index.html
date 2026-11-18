@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grepy for Mac - Search Logs, Folders and Archives Inside Archives</title>
+    <meta name="description" content="Grepy searches logs, folders and nested archives on your Mac: zip, tar, gz, xz, 7z, rar and more, with regex, a time filter for any log format and a file tree. Coming soon.">
+    <link rel="canonical" href="https://airyaudio.com/more/grepy/">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Airy Audio">
+    <meta property="og:url" content="https://airyaudio.com/more/grepy/">
+    <meta property="og:title" content="Grepy for Mac: coming soon">
+    <meta property="og:description" content="Search logs, folders and archives inside archives, without unpacking anything yourself.">
+    <meta property="og:image" content="https://airyaudio.com/more/grepy/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://airyaudio.com/more/grepy/images/og-image.jpg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://airyaudio.com/more/grepy/#app",
+        "name": "Grepy",
+        "description": "A Mac app for grep searches in logs, folders and nested archives: regex or text, a time filter for common log formats, include and exclude masks, context lines and a file tree.",
+        "url": "https://airyaudio.com/more/grepy/",
+        "image": "https://airyaudio.com/more/grepy/images/og-image.jpg",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS 14 or later",
+        "inLanguage": "en",
+        "featureList": [
+            "Search folders, files and archives inside archives: zip, tar, tgz, gz, xz, bz2, zst, 7z, rar and more",
+            "Regex or plain text, case and whole-word matching, context lines",
+            "Time filter for common log formats",
+            "File tree with checkboxes and a file name filter",
+            "Extra filters with AND, OR and NOT",
+            "No data collected"
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Airy Audio",
+            "url": "https://airyaudio.com/",
+            "email": "support@airyaudio.com",
+            "logo": "https://airyaudio.com/images/icon-512.png"
+        }
+    }
+    </script>
+    <link rel="icon" type="image/png" sizes="64x64" href="images/icon-64.png">
+    <link rel="apple-touch-icon" href="images/icon-180.png">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<header class="nav">
+    <div class="wrap">
+        <a class="brand" href="#top"><img src="images/icon-64.png" alt="">Grepy</a>
+        <nav class="nav-links">
+            <a href="../../home/">Home</a>
+            <a class="hide-sm" href="#features">Features</a>
+            <a href="#support">Support</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="../">More</a>
+        </nav>
+    </div>
+</header>
+
+<main id="top">
+
+    <!-- Hero -->
+    <div class="hero hero-wide">
+        <div class="wrap hero-grid">
+            <div class="hero-text">
+            <div class="hero-icon"><img src="images/icon-512.png" width="128" height="128" alt="Grepy app icon"></div>
+            <h1><span class="hero-kicker">Grepy for Mac</span>Find the line.<br><span class="gradient-text">Even deep in an archive.</span></h1>
+            <p class="lead">Grepy searches logs, folders and archives inside archives on your Mac. Drop in a folder or a zip, type what you look for, and get every matching line with its file, line number and time. You never unpack anything yourself.</p>
+            <div class="cta-row">
+                <a class="btn btn-blue" href="#features">See Features</a>
+                <a class="btn" href="mailto:support@airyaudio.com?subject=Grepy">Tell Me When It's Out</a>
+            </div>
+            <p class="cta-note">Coming soon to the Mac App Store. macOS 14 Sonoma or later.</p>
+            </div>
+            <div class="grep-mock" role="img" aria-label="An illustration of Grepy: the search ERROR|timeout in Regex mode finds lines in server.log inside a tar.gz archive and in worker.log inside a gz file inside a zip">
+                <div class="gm-top">
+                    <span class="gm-lights"><i></i><i></i><i></i></span>
+                </div>
+                <div class="gm-card">
+                    <div class="gm-row"><span class="gm-label">Search in</span><span class="gm-field">~/Logs, backup.zip</span><span class="gm-btn">Choose…</span><span class="gm-btn">Clear</span></div>
+                    <div class="gm-row"><span class="gm-label">Search for</span><span class="gm-field gm-mono">ERROR|timeout</span><span class="gm-seg"><span>Text</span><span class="on">Regex</span></span><span class="gm-btn">Aa</span><span class="gm-btn">Word</span></div>
+                </div>
+                <div class="gm-results">
+                    <div class="gm-head"><span class="gm-chev">⌄</span><span class="gm-path">logs/2026-10-31.tar.gz/app/server.log</span><span class="gm-badge">2</span></div>
+                    <div class="gm-line"><span class="gm-n">1203</span><span>2026-10-31 09:14:01 INFO  charge started</span></div>
+                    <div class="gm-line hit"><span class="gm-n">1204</span><span>2026-10-31 09:14:02 <mark>ERROR</mark> payment <mark>timeout</mark> after 30 s</span></div>
+                    <div class="gm-line"><span class="gm-n gm-sep">···</span><span></span></div>
+                    <div class="gm-line hit"><span class="gm-n">1219</span><span>2026-10-31 09:14:31 <mark>ERROR</mark> retry 3 of 3 failed</span></div>
+                    <div class="gm-head"><span class="gm-chev">⌄</span><span class="gm-path">backup.zip/nested/worker.log.gz/worker.log</span><span class="gm-badge">1</span></div>
+                    <div class="gm-line hit"><span class="gm-n">88</span><span>Oct 31 09:14:05 <mark>ERROR</mark> queue is full</span></div>
+                </div>
+                <div class="gm-status"><span>3 matches in 2 files</span><span class="gm-dim">Disk used: 12.4 MB</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Highlights -->
+    <section id="features">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Why Grepy</span>
+                <h2>grep, with a window around it.</h2>
+                <p>Everything you'd do with grep, zgrep and a few pipes, in one Mac app, with a tree of what you search and a viewer for what you find.</p>
+            </div>
+            <div class="grid reveal">
+                <div class="card">
+                    <div class="icon-badge blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8"/><path d="M1 3h22v5H1zM10 12h4"/></svg></div>
+                    <h3>Archives inside archives</h3>
+                    <p>zip, tar, tgz, gz, xz, bz2, zst, 7z, rar and more, opened one inside another as deep as they go. Each match shows its full path, through every archive.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-badge purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11h6"/></svg></div>
+                    <h3>Regex or text</h3>
+                    <p>A regular expression or plain text, match case (Aa) and whole words, lines of context before and after, and include and exclude masks for file names.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-badge orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                    <h3>Filter by time</h3>
+                    <p>Keep only the lines from the minutes that matter. Grepy reads the usual log times: ISO, 31/10/2026, Oct 31, Apache, epoch and time only.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-badge green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6M4 4v16M4 12h6M4 20h6"/><rect x="12" y="2" width="9" height="4" rx="1"/><rect x="12" y="10" width="9" height="4" rx="1"/><rect x="12" y="18" width="9" height="4" rx="1"/></svg></div>
+                    <h3>A tree of your files</h3>
+                    <p>The sidebar shows every folder, file and archive. Tick what to search, and filter the tree by file name.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-badge red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg></div>
+                    <h3>More filters</h3>
+                    <p>Add filters with AND and OR, or NOT to drop the lines you don't want. Open a file in the viewer, with every match highlighted.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-badge pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/></svg></div>
+                    <h3>Private and sandboxed</h3>
+                    <p>Grepy reads only what you choose and changes nothing. Archives are opened with macOS's own libarchive, inside the App Sandbox, and no data leaves your Mac.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support -->
+    <section id="support">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Support</span>
+                <h2>Coming soon.</h2>
+                <p>Grepy isn't out yet. Write to us if you want to know when it is, or if you have a log it should handle.</p>
+            </div>
+            <div class="faq reveal">
+                <h3 class="faq-title">Frequently asked questions</h3>
+                <details>
+                    <summary>When will Grepy be available?</summary>
+                    <p>Soon, on the Mac App Store. This page will have the link as soon as it's there.</p>
+                </details>
+                <details>
+                    <summary>Which Macs will it run on?</summary>
+                    <p>macOS 14 Sonoma or later.</p>
+                </details>
+                <details>
+                    <summary>Does Grepy change my files or archives?</summary>
+                    <p>No. It only reads them. Archives are unpacked into Grepy's own temporary folder, so a second search doesn't unpack them again. The space they take shows as Disk used, and they are deleted when you press Clear and when you quit.</p>
+                </details>
+                <details>
+                    <summary>Which archive formats does it open?</summary>
+                    <p>zip, tar, tgz, gz, xz, bz2, zst, 7z, rar and the other formats macOS's libarchive reads, also one inside another.</p>
+                </details>
+                <details>
+                    <summary>Are there keyboard shortcuts?</summary>
+                    <p><kbd>⌘</kbd><kbd>↵</kbd> starts the search and <kbd>⌘</kbd><kbd>.</kbd> cancels it. You can also drag folders, files and archives onto the window.</p>
+                </details>
+                <details>
+                    <summary>Does Grepy collect any data?</summary>
+                    <p>No. See the <a href="privacy.html">Privacy Policy</a>.</p>
+                </details>
+            </div>
+            <div class="card contact">
+                <h3>Want to know when it's out?</h3>
+                <p>Write to us, and we'll let you know.</p>
+                <a class="btn btn-primary" href="mailto:support@airyaudio.com?subject=Grepy">support@airyaudio.com</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="wrap">
+        <span>© 2026 Airy Audio</span>
+        <nav>
+            <a href="#support">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="../">More Apps</a>
+            <a href="mailto:support@airyaudio.com">Contact</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+// Fade sections in while scrolling (skipped with Reduce Motion).
+(function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('js-reveal');
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { rootMargin: '0px 0px -8% 0px' });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    }
+})();
+</script>
+
+</body>
+</html>

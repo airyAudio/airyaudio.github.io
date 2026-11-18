@@ -16,11 +16,11 @@
     </url>
     <url>
         <loc>https://airyaudio.com/home/</loc>
-        <lastmod>2026-11-17</lastmod>
+        <lastmod>2026-11-18</lastmod>
     </url>
     <url>
         <loc>https://airyaudio.com/more/</loc>
-        <lastmod>2026-11-17</lastmod>
+        <lastmod>2026-11-18</lastmod>
     </url>
     <url>
         <loc>https://airyaudio.com/more/airy-windows/</loc>
@@ -51,5 +51,14 @@
     <url>
         <loc>https://airyaudio.com/more/mixy/privacy.html</loc>
         <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/more/conventional-mouse/</loc>
+        <lastmod>2026-11-18</lastmod>
+        <image:image><image:loc>https://airyaudio.com/more/conventional-mouse/images/og-image.jpg</image:loc></image:image>
+    </url>
+    <url>
+        <loc>https://airyaudio.com/more/conventional-mouse/privacy.html</loc>
+        <lastmod>2026-11-18</lastmod>
     </url>
 </urlset>

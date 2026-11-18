@@ -700,28 +700,50 @@ code {
 }
 .launch-page h1 { font-size: clamp(2.2em, 6vw, 3.2em); letter-spacing: -0.03em; margin: 0 0 10px; line-height: 1.1; }
 
-.launchpad { max-width: 640px; margin: 40px auto 0; }
-.launch-label { font-size: 0.95em; font-weight: 600; color: var(--text-3); margin: 0 0 10px; text-align: center; letter-spacing: 0; }
-.launch-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; }
-.launch-app { width: 140px; }
+.launchpad {
+    --lp-bg: rgba(255, 255, 255, 0.86);
+    --lp-border: rgba(0, 0, 0, 0.06);
+    --lp-name: #3a3a3c;
+    max-width: 680px; margin: 40px auto 0; padding: 30px 24px 22px;
+    border-radius: 44px; border: 1px solid var(--lp-border); background: var(--lp-bg);
+    backdrop-filter: blur(40px) saturate(1.6); -webkit-backdrop-filter: blur(40px) saturate(1.6);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05), 0 40px 80px -36px rgba(20, 30, 60, 0.38);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .launchpad {
+        --lp-bg: rgba(38, 38, 42, 0.82);
+        --lp-border: rgba(255, 255, 255, 0.08);
+        --lp-name: #e5e5ea;
+    }
+}
+.launch-label { font-size: 0.95em; font-weight: 600; color: var(--text-3); margin: 0 0 6px 14px; letter-spacing: 0; }
+.launch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 0; }
 .launch-app {
-    display: flex; flex-direction: column; align-items: center; gap: 10px;
-    padding: 14px 6px 12px; border-radius: 20px; color: var(--text); text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    padding: 14px 4px 12px; border-radius: 22px; color: var(--lp-name); text-align: center;
 }
-.launch-app:hover { text-decoration: none; background: color-mix(in srgb, var(--text) 5%, transparent); }
+.launch-app:hover { text-decoration: none; }
 .launch-app img {
-    width: 112px; height: 112px;
-    filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.18));
-    transition: transform 0.15s ease;
+    width: 120px; height: 120px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16));
+    transition: transform 0.15s ease, filter 0.15s ease;
 }
-.launch-app:active img { transform: scale(0.94); }
-.launch-app span { font-size: 1.05em; font-weight: 500; }
+.launch-app:hover img { filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22)); }
+.launch-app:active img { transform: scale(0.94); filter: brightness(0.85) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.16)); }
+.launch-app span { font-size: 1.12em; font-weight: 400; line-height: 1.25; }
+@media (max-width: 600px) {
+    .launchpad { padding: 22px 10px 14px; border-radius: 34px; }
+    .launch-grid { grid-template-columns: repeat(3, 1fr); }
+    .launch-app img { width: 80px; height: 80px; }
+    .launch-app span { font-size: 0.95em; }
+}
 
 .startmenu {
     --start-bg: rgba(243, 243, 243, 0.86);
     --start-border: rgba(0, 0, 0, 0.08);
     --start-hover: rgba(0, 0, 0, 0.045);
-    max-width: 640px; margin: 40px auto 0; padding: 22px 26px 26px;
+    max-width: 680px; margin: 40px auto 0; padding: 22px 26px 26px;
     border-radius: 8px; border: 1px solid var(--start-border);
     background: var(--start-bg);
     backdrop-filter: blur(30px) saturate(1.4); -webkit-backdrop-filter: blur(30px) saturate(1.4);

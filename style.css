@@ -803,10 +803,19 @@ code {
     backdrop-filter: blur(24px) saturate(1.5); -webkit-backdrop-filter: blur(24px) saturate(1.5);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 18px 40px -12px rgba(0, 0, 0, 0.35);
 }
-.mb-row { display: flex; align-items: center; height: 27px; padding: 0 8px 0 4px; border-radius: 6px; }
-.mb-row:first-child { background: #0a84ff; color: #fff; }
-.mb-check { width: 18px; text-align: center; font-size: 12px; }
-.mb-sep { height: 1px; margin: 5px 10px; background: var(--mb-line); }
+.mb-row { display: flex; align-items: center; justify-content: space-between; height: 28px; padding: 0 11px; border-radius: 6px; }
+.mb-switch i {
+    position: relative; width: 32px; height: 18px; border-radius: 9px; flex: none; margin-left: 20px;
+    background: color-mix(in srgb, var(--mb-text) 16%, transparent);
+}
+.mb-switch i::after {
+    content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%;
+    background: #fff; box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.25);
+}
+.mb-switch i.on { background: #0a84ff; }
+.mb-switch i.on::after { left: 16px; }
+.mb-key { color: var(--mb-dim); }
+.mb-sep { height: 1px; margin: 5px 11px; background: var(--mb-line); }
 
 .card h3 .tag { display: block; margin-top: 4px; font-size: 0.72em; }
 .plan .plan-note { color: var(--text-3); font-size: 0.9em; margin: 14px 0 0; }

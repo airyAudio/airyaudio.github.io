@@ -30,6 +30,7 @@
         "description": "A macOS menu bar app that makes a mouse feel and scroll like on Windows: the pointer speed and acceleration, fixed-step scrolling and Back / Forward side buttons. The trackpad is not changed.",
         "url": "https://airyaudio.com/more/conventional-mouse/",
         "image": "https://airyaudio.com/more/conventional-mouse/images/og-image.jpg",
+        "screenshot": ["https://airyaudio.com/more/conventional-mouse/images/app-store-menu.webp"],
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "macOS 14 or later",
         "softwareVersion": "1.0.0",
@@ -142,12 +143,27 @@
                 <div class="card">
                     <div class="icon-badge red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 20c5 0 8-3 10-8s5-8 8-8"/><path d="M3 20h18"/></svg></div>
                     <h3>Precision <span class="tag">Conventional Mouse+</span></h3>
-                    <p>Windows' "Enhance pointer precision" curve, checked against a Windows 11 PC at 1000 and 8000 reports a second, within 3 %. Switch it off for a constant speed with no acceleration.</p>
+                    <p>Windows' "Enhance pointer precision" curve, checked against a Windows 11 PC at 1000 and 8000 reports a second, within 3&nbsp;%. Switch it off for a constant speed with no acceleration.</p>
                 </div>
                 <div class="card">
                     <div class="icon-badge pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/></svg></div>
                     <h3>Light and private</h3>
                     <p>Lives in the menu bar, with no windows and no Dock icon. Nothing sits in the pointer's path, so there is no added lag. No data collected, no network access at all.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The App Store version -->
+    <section>
+        <div class="wrap">
+            <div class="showcase reveal">
+                <div class="shot zoomable"><img src="images/app-store-menu.webp" width="2000" height="1250" loading="lazy" alt="The Conventional Mouse menu in the menu bar: Scroll Wheel, Buttons and Open at Login switched on, then Hide from Menu Bar and Quit Conventional Mouse"></div>
+                <div>
+                    <span class="tag">Conventional Mouse</span>
+                    <h3>Two switches, and you're done.</h3>
+                    <p>The Mac App Store version keeps it simple: Scroll Wheel and Buttons, right in the menu bar, plus Open at Login. Flip a switch and the menu stays open, like the menus in Control Center.</p>
+                    <p>Want the Windows pointer too? <a href="#download">Conventional Mouse+</a> adds Motion and Precision.</p>
                 </div>
             </div>
         </div>
@@ -280,8 +296,13 @@
     </div>
 </footer>
 
+<dialog class="lightbox" aria-label="Screenshot">
+    <img alt="">
+</dialog>
+
 <script>
-// Fade sections in while scrolling (skipped with Reduce Motion).
+// Fade sections in while scrolling (skipped with Reduce Motion), and
+// open screenshots full size on click.
 (function () {
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduce && 'IntersectionObserver' in window) {
@@ -293,6 +314,18 @@
         }, { rootMargin: '0px 0px -8% 0px' });
         document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
     }
+
+    var box = document.querySelector('.lightbox');
+    if (!box || typeof box.showModal !== 'function') return;
+    var big = box.querySelector('img');
+    document.querySelectorAll('.zoomable img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        function open() { big.src = img.currentSrc || img.src; big.alt = img.alt; box.showModal(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    });
+    box.addEventListener('click', function () { box.close(); });
 })();
 </script>
 

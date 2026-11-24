@@ -3,12 +3,17 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://airyaudio.com/</loc>
-        <lastmod>2026-11-10</lastmod>
+        <lastmod>2026-11-24</lastmod>
         <image:image><image:loc>https://airyaudio.com/images/player-web.webp</image:loc></image:image>
         <image:image><image:loc>https://airyaudio.com/images/light-dark-web.webp</image:loc></image:image>
         <image:image><image:loc>https://airyaudio.com/images/equalizer-info-web.webp</image:loc></image:image>
         <image:image><image:loc>https://airyaudio.com/images/cover-mode-web.webp</image:loc></image:image>
         <image:image><image:loc>https://airyaudio.com/images/playlist-views-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/pin-artist-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/album-view-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/equalizer-presets-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/output-web.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/images/cover-playlist-web.webp</image:loc></image:image>
     </url>
     <url>
         <loc>https://airyaudio.com/privacy.html</loc>

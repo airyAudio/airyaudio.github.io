@@ -877,3 +877,6 @@ code {
     .gm-btn:nth-last-child(-n+2):not(.gm-seg) { display: none; }
     .gm-label { width: 62px; white-space: nowrap; }
 }
+
+/* Tall screenshots (a single narrow window) in a showcase */
+.shot.narrow { max-width: 360px; width: 100%; justify-self: center; margin: 0 auto; }

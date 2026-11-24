@@ -29,12 +29,16 @@
     </url>
     <url>
         <loc>https://airyaudio.com/more/airy-windows/</loc>
-        <lastmod>2026-11-17</lastmod>
+        <lastmod>2026-11-25</lastmod>
         <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/player.webp</image:loc></image:image>
         <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/light-dark.webp</image:loc></image:image>
         <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/equalizer-info.webp</image:loc></image:image>
         <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/cover-mode.webp</image:loc></image:image>
         <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/playlist-views.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/pin-artist.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/album-view.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/equalizer-presets.webp</image:loc></image:image>
+        <image:image><image:loc>https://airyaudio.com/more/airy-windows/images/cover-playlist.webp</image:loc></image:image>
     </url>
     <url>
         <loc>https://airyaudio.com/more/airy-windows/privacy.html</loc>

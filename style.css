@@ -880,3 +880,4 @@ code {
 
 /* Tall screenshots (a single narrow window) in a showcase */
 .shot.narrow { max-width: 360px; width: 100%; justify-self: center; margin: 0 auto; }
+.shot.medium { max-width: 480px; width: 100%; justify-self: center; margin: 0 auto; }

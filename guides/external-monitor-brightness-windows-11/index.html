@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to change external monitor brightness on Windows 11 - Airy Audio</title>
+    <meta name="description" content="The brightness slider in Windows 11 often does nothing for an external monitor. How to change it without the monitor's buttons, over DDC/CI, from the taskbar.">
+    <link rel="canonical" href="https://airyaudio.com/guides/external-monitor-brightness-windows-11/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Airy Audio">
+    <meta property="og:url" content="https://airyaudio.com/guides/external-monitor-brightness-windows-11/">
+    <meta property="og:title" content="How to change external monitor brightness on Windows 11">
+    <meta property="og:description" content="The brightness slider in Windows 11 often does nothing for an external monitor. How to change it without the monitor's buttons, over DDC/CI, from the taskbar.">
+    <meta property="og:image" content="https://airyaudio.com/more/brightly/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "How to change external monitor brightness on Windows 11",
+            "description": "The brightness slider in Windows 11 often does nothing for an external monitor. How to change it without the monitor's buttons, over DDC/CI, from the taskbar.",
+            "url": "https://airyaudio.com/guides/external-monitor-brightness-windows-11/",
+            "datePublished": "2026-11-27",
+            "dateModified": "2026-11-27",
+            "author": {
+                "@type": "Organization",
+                "name": "Airy Audio",
+                "url": "https://airyaudio.com/"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Airy Audio",
+                "url": "https://airyaudio.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://airyaudio.com/images/icon-512.png"
+                }
+            },
+            "image": "https://airyaudio.com/more/brightly/images/tooltip.webp",
+            "mainEntityOfPage": "https://airyaudio.com/guides/external-monitor-brightness-windows-11/"
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "My monitor isn't in the list. Why?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Its DDC/CI is off, or something between the PC and the monitor blocks it: some docks, KVM switches and TVs don't pass it through. Then only the monitor's own buttons change it."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does changing brightness this way wear out the monitor?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. It is the same setting the monitor's own buttons change."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Guides",
+                    "item": "https://airyaudio.com/guides/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "How to change external monitor brightness on Windows 11",
+                    "item": "https://airyaudio.com/guides/external-monitor-brightness-windows-11/"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <link rel="icon" type="image/png" sizes="64x64" href="../../images/icon-64.png">
+    <link rel="apple-touch-icon" href="../../images/icon-180.png">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<header class="nav">
+    <div class="wrap">
+        <a class="brand" href="../../home/"><img src="../../images/icon-64.png" alt="">Airy Audio</a>
+        <nav class="nav-links">
+            <a href="../../home/">Apps</a>
+            <a href="../">Guides</a>
+            <a href="../../more/">More</a>
+        </nav>
+    </div>
+</header>
+
+<main class="doc guide">
+    <p class="crumbs"><a href="../">Guides</a> › Windows</p>
+    <h1>How to change external monitor brightness on Windows 11</h1>
+    <p class="date">Updated November 2026</p>
+
+    <div class="card answer">
+        <p><strong>Short answer:</strong> Windows 11's brightness slider is made for a laptop's built-in screen, so it often does nothing for an external monitor. Most monitors can still take brightness from the PC over DDC/CI: switch DDC/CI on in the monitor's own menu, then use an app such as Brightly to change it from the taskbar.</p>
+    </div>
+
+    <h2>What DDC/CI is</h2>
+    <p>DDC/CI is a standard way for a PC to send settings to a monitor through the display cable, over HDMI, DisplayPort or USB-C. Almost every monitor made in the last ten years supports it, though some ship with it switched off.</p>
+    <h2>Step 1: switch on DDC/CI</h2>
+    <p>Open the monitor's menu with its own buttons and look for <strong>DDC/CI</strong>, often under System, Setup or Others. Set it to On.</p>
+    <h2>Step 2: change the brightness from Windows</h2>
+    <ol class="steps">
+        <li>Install Brightly from the Microsoft Store and open it. Its icon appears next to the clock.</li>
+        <li>Scroll the mouse wheel over the icon, or click it for a slider for every display.</li>
+        <li>Tick the displays the wheel and the keys should change, one or all of them together.</li>
+    </ol>
+    <div class="guide-shot zoomable"><img src="../../more/brightly/images/tooltip.webp" width="1366" height="768" loading="lazy" alt="The Brightly tray icon next to the clock with a tooltip showing the display's brightness"></div>
+    <p>Each screen shows its own level while it changes. A monitor that is slow to wake up appears by itself within about 15 seconds.</p>
+
+    <div class="card app-cta">
+        <img src="../../more/brightly/images/icon-512.png" width="64" height="64" alt="">
+        <div>
+            <h3>Brightly for Windows</h3>
+            <p>Brightness for every display, right from the taskbar. Try it free for 7 days.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9PLGN51TLM9Q">Get it from Microsoft</a>
+                <a class="btn" href="../../more/brightly/">Learn more about Brightly</a>
+            </div>
+        </div>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+        <details>
+            <summary>My monitor isn't in the list. Why?</summary>
+            <p>Its DDC/CI is off, or something between the PC and the monitor blocks it: some docks, KVM switches and TVs don't pass it through. Then only the monitor's own buttons change it.</p>
+        </details>
+        <details>
+            <summary>Does changing brightness this way wear out the monitor?</summary>
+            <p>No. It is the same setting the monitor's own buttons change.</p>
+        </details>
+    </div>
+
+    <p class="more-guides"><a href="../">More guides →</a></p>
+</main>
+
+<footer>
+    <div class="wrap">
+        <span>© 2026 Airy Audio</span>
+        <nav>
+            <a href="../">Guides</a>
+            <a href="../../more/">More Apps</a>
+            <a href="mailto:support@airyaudio.com">Contact</a>
+        </nav>
+    </div>
+</footer>
+
+<dialog class="lightbox" aria-label="Screenshot">
+    <img alt="">
+</dialog>
+
+<script>
+// Open screenshots full size on click.
+(function () {
+    var box = document.querySelector('.lightbox');
+    if (!box || typeof box.showModal !== 'function') return;
+    var big = box.querySelector('img');
+    document.querySelectorAll('.zoomable img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        function open() { big.src = img.currentSrc || img.src; big.alt = img.alt; box.showModal(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    });
+    box.addEventListener('click', function () { box.close(); });
+})();
+</script>
+
+</body>
+</html>
